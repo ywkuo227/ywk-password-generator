@@ -125,8 +125,8 @@ function generatePassword() {
       return outputPw = "";
     // Pull all user requested character type into an array for password generation later.
     } else if ((i <= 3) && (aryUserInput[i] === true)) {
+      // Pushed all of the selected character type from the character pool to the generator pool.
       for (var j = 0; j < aryCharPool[i].length; j++) {
-        // Pushed all of the selected character type from the character pool to the generator pool.
         aryGenPool.push(aryCharPool[i][j]);
       }
     }
