@@ -88,21 +88,21 @@ function generatePassword() {
           }
         }
       // If user responses from the prompt are Yes or No. Assign True or False to the relevant positions in aryUserInput.
-      } else if ((prmptInput === "Y") || (prmptInput === "N") || (prmptInput === "y") || (prmptInput === "n")) {
+      } else if (((i >= 0) && (i <= 3)) && ((prmptInput === "Y") || (prmptInput === "N") || (prmptInput === "y") || (prmptInput === "n"))) {
         if ((prmptInput === "Y") || (prmptInput === "y")) {
           aryUserInput[i] = true;
         } else if ((prmptInput === "N") || (prmptInput === "n")){
           aryUserInput[i] = false;
         }
       // Assign the user intended password length to the relevant positions in aryUserInput.
-      } else if ((prmptInput >= 8 && prmptInput <= 128) === true) {
-        aryUserInput[i] = prmptInput;
+      } else if ((i === 4) && ((prmptInput >= 8 && prmptInput <= 128) === true) && (prmptInput !== "Y") && (prmptInput !== "N") && (prmptInput !== "y") && (prmptInput !== "n")) {
+          aryUserInput[i] = prmptInput;
       // Throw relevant error messages if none of the above conditions are met.
       } else {
-        // Return need user input error for character type prompts.
+        // Return "Need user input error for character type" prompts.
         if (i <= 3) {
           alert(alrtNeedInput);
-        // Return need valid number for password length prompt.
+        // Return "Need valid number for password length" prompt.
         } else if (i === 4) {
           alert(alrtNotVldNum);
         }
