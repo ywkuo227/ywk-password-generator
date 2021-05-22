@@ -140,12 +140,12 @@ function generatePassword() {
     outputPw = outputPw + aryGenPool[idxPwGen];
   }
 
-  // Bug checks. REMOVE BEFORE FLIGHT
-  console.log(aryUserInput);
-  console.log(aryGenPool);
-  console.log(aryGenPool.length);
-  console.log(outputPw);
-  console.log(outputPw.length);
+  // Debug. REMOVE BEFORE FLIGHT
+  // console.log(aryUserInput);
+  // console.log(aryGenPool);
+  // console.log(aryGenPool.length);
+  // console.log(outputPw);
+  // console.log(outputPw.length);
 
   // Output generated password.
   return outputPw;
